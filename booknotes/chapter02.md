@@ -11,7 +11,7 @@
 - 使用 cin和 cout 进行输入和输出的程序必须包含文件 iostream。
 
 <img width="1045" height="808" alt="图片" src="https://github.com/user-attachments/assets/6abb9acb-1d7a-4003-a94e-3af65e806142" />
-
+<img width="740" height="195" alt="图片" src="https://github.com/user-attachments/assets/e2893b79-99c1-492f-9450-f6daa90700f2" />
 
 ```Cpp
 #include <iostream>
@@ -31,4 +31,9 @@ int main() {
 
 > 换行符\n和控制符endl的差别是：endl确保程序继续运行前刷新输出（将其立即显示在屏幕上），而使用“\n”不能提供这样的保证，这意味着在有些系统中，有时可能在您输入信息后才会出现提示。
 
+## 2.3 其他c++语句
+与cout一样，cin也是一个智能对象。它可以将通过键盘输入的一系列字符（即输入）转换为接收信息的变量能够接受的形式。
 
+> 输出时，<<运算符将字符串插入到输出流中；输入时，cin使用>>运算符从输入流中抽取字符。
+
+## 2.4 函数
