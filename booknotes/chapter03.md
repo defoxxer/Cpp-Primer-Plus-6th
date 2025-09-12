@@ -1,4 +1,4 @@
-# 第三章 处理数据
+<img width="768" height="180" alt="图片" src="https://github.com/user-attachments/assets/4bf64287-7a5d-4be0-b50e-a91774774091" /># 第三章 处理数据
 
 **面向对象编程（OOP）的本质是设计并扩展自己的数据类型。设计自己的数据类型就是让类型与数据匹配。**
 
@@ -219,7 +219,7 @@ C++允许将一种类型的值赋给另一种类型的变量。这样做时，�
 
 将一个值赋给值取值范围更大的类型通常不会导致什么问题。如，将short值赋给long变量并不会改变这个值，只是占用的字节更多而 已。然而，将一个很大的long值（如2111222333）赋给float变量将降低 精度。因为float只有6位有效数字，因此这个值将被四舍五入为 2.11122E9。因此，有些转换是安全的，有些则会带来麻烦。
 
-![image-20210719232005071](https://static.fungenomics.com/images/2021/07/image-20210719232005071.png)
+<img width="768" height="180" alt="图片" src="https://github.com/user-attachments/assets/55801c83-6623-45cd-a25d-015a95094cbb" />
 
 如下的报错是一个可能:
 
