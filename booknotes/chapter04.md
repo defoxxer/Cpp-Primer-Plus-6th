@@ -199,7 +199,10 @@ cin.getline(name1, ArSize).getline(name2, ArSize);
 
 清单程序4.6 的一个问题是：
 当cin读取年份，将回 车键生成的换行符留在了输入队列中。后面的cin.getline( )看到换行符 后，将认为是一个空行，并将一个空字符串赋给address数组。解决之道 是，在读取地址之前先读取并丢弃换行符。这可以通过几种方法来完 成，其中包括使用没有参数的get( )和使用接受一个char参数的get( )。
-
+```Cpp
+cin >> year
+get();
+```
 也可以利用表达式cin>>year返回cin对象，将调用拼接起来：
 
 ```Cpp
