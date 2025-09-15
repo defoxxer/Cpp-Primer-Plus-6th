@@ -269,6 +269,7 @@ strcat(charr3, charr2);
 
 函数strcat( )试图将全部12个字符复制到数组site中，这将覆盖相邻的内存。这可能导致程序终止，或者程序继续运行，但数据被损坏。**string类具有自动调整大小的功能，从而能够避免这种问题发生**。
 
+<img width="781" height="169" alt="图片" src="https://github.com/user-attachments/assets/d6ba0366-fd63-4e72-9666-417ecb596565" />
 
 ### 4.3.4 string类I/O
 
@@ -297,11 +298,16 @@ C++11新增的另一种类型是原始（raw）字符串，并使用前缀 R 来
 
 结构体是用户定义的类型，而结构体声明定义了这种类型的数据属性。结构体的定义需要用 关键字 **struct** 做标识。 定义了类型后，便可以创建这种类型的变量。以下例子是一个结构体的定义，它使用了一个适合用于存储字符串的 char数组、一个float和一个double。列表中的每一项都被称为结构体成员，因此 infatable 结构体有3个成员（参见图4.6）
 
-![image-20210722163912443](https://static.fungenomics.com/images/2021/07/image-20210722163912443.png)
+<img width="363" height="182" alt="图片" src="https://github.com/user-attachments/assets/16cbc62f-e13a-4226-a923-b7728fafcbbf" />
 
 定义之后就可以将这个结构体当做常规的 C++ 数据类型（如同 int、double、string等）来使用。
 
 在结构体类型中，可以通过使用成员运算符 `.` 来访问各个成员。
+
+```Cpp
+inflatable hat;    #结构体声明定义了一种新类型。在C++中，省略struct不会出错。
+```
+由于hat的类型为inflatable，因此可以使用成员运算符（.）来访问各个成员。例如，hat.volume指的是结构体的volume成员，hat.price 指的是price成员。hat是一个结构体，而hat.price是一个double变量。顺便说一句，访问类成员函数（如cin.getline（））的方式是从访问结构成员变量（如vincent.price）的方式衍生而来的。
 
 ### 4.4.1 在程序中使用结构体
 
@@ -408,7 +414,12 @@ long *fellow;       // 创建一个指向 long 类型的指针
 
 ### 4.7.3 指针和数字
 
-指针不是整型，虽然计算机通常把地址当作整数来处理。在有些平台 中，int 类型是个2字节值，而地址是个4字节值。
+指针不是整型，虽然计算机通常把地址当作整数来处理。从概念上看，指针与整数是截然不同的类型。整数是可以执行加、减、除等运算的数字，而指针描述的是位置，将两个地址相乘没有任何意义。从可以对整数和指针执行的操作上看，它们也是彼此不同的。因此，**不能简单地将整数赋给指针，应通过强制类型转换将数字转换为适当的地址类型。**
+
+```Cpp
+int * pt;
+pt =(int *) 0xB8000000; / types now match 
+```
 
 ### 4.7.4 使用new来分配内存
 
@@ -541,9 +552,7 @@ pointername[i] becomes *(pointername + i)
 
 **【注意】数组名被解释为其第一个元素的地址，而对数组名应用地址运算符 时，得到的是整个数组的地址，区别很大。**
 
-
-
-![image-20210723113548998](https://static.fungenomics.com/images/2021/07/image-20210723113548998.png)
+<img width="785" height="317" alt="图片" src="https://github.com/user-attachments/assets/49776da3-8abb-4085-a197-0e8a1f94ffa3" />
 
 ### 4.8.2 指针小结
 
